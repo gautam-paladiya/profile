@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AvatarImage from "../assets/img/avatar.png";
+import AvatarImage from "../assets/img/profile.jpg";
 import {
   FaFacebookF,
   FaTwitter,
@@ -8,6 +8,7 @@ import {
   FaMediumM,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import FileSaver from "file-saver";
 
 function ProfileCardComponent() {
   const [state, setstate] = useState(0);
@@ -16,6 +17,13 @@ function ProfileCardComponent() {
       setstate(1);
     }, 3000);
   }, []);
+
+  const downloadFile = () => {
+    FileSaver.saveAs(
+      process.env.PUBLIC_URL + "/GAUTAM's_Resume.pdf",
+      "GAUTAM's_Resume.pdf"
+    );
+  };
 
   return (
     <motion.div className=" rounded-lg shadow-lg w-full flex flex-col bg-gray-100">
@@ -35,7 +43,10 @@ function ProfileCardComponent() {
           <FaGithub size={22} />
         </div>
       </div>
-      <button className="px-8 py-2 uppercase mx-auto text-base bg-black text-gray-200 my-6 rounded-full self-center ">
+      <button
+        onClick={downloadFile}
+        className="px-8 py-2 uppercase mx-auto text-base bg-black text-gray-200 my-6 rounded-full self-center "
+      >
         download resume
       </button>
     </motion.div>

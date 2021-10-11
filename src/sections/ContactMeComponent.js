@@ -1,20 +1,35 @@
 import React from "react";
 
 function ContactMeComponent() {
+  //   console.log(process.env.REACT_APP_CONTACT_API_KEY);
+
   return (
     <div className="bg-white w-full px-5 md:px-10 py-5 md:py-10  border-1 border-gray-300 ">
       <h1 className="text-2xl font-bold my-5">CONTACT ME</h1>
       <div className="flex flex-col md:items-center mt-10">
         <h1 className="text-xl font-semibold">FELL FREE TO CONTACT ME</h1>
-        <form action="" className="space-y-5 my-5 w-full">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          className="space-y-5 my-5 w-full flex flex-col items-stretch"
+        >
+          <input
+            type="hidden"
+            name="apikey"
+            value={process.env.REACT_APP_CONTACT_API_KEY}
+          />
+
+          {/* <input type="hidden" name="redirect" value={window.location.hash} /> */}
+
           <div className="flex items-center justify-items-stretch space-x-5">
             <label htmlFor="name " className="text-lg w-1/4">
               Name
             </label>
             <input
               type="text"
-              id="name"
               className="bg-gray-300 w-full focus:outline-none p-2 text-lg"
+              required
+              name="name"
             />
           </div>
           <div className="flex items-center justify-between space-x-5">
@@ -23,18 +38,20 @@ function ContactMeComponent() {
             </label>
             <input
               type="text"
-              id="name"
               className="bg-gray-300 w-full focus:outline-none p-2 text-lg"
+              name="email"
+              required
             />
           </div>
           <div className="flex items-center justify-between space-x-5">
             <label htmlFor="name " className="text-lg w-1/4">
-              Subject
+              Phone
             </label>
             <input
               type="text"
-              id="name"
               className="bg-gray-300 w-full focus:outline-none p-2 text-lg"
+              name="Phone Number"
+              required
             />
           </div>
           <div className="flex items-center justify-between space-x-5 ">
@@ -44,12 +61,17 @@ function ContactMeComponent() {
             <textarea
               className="bg-gray-300 w-full focus:outline-none p-2 text-lg h-full"
               cols={15}
+              name="message"
+              required
             />
           </div>
+          <button
+            type="submit"
+            className="rounded-full  text-black bg-blue-200 shadow-2xl px-9 py-2 font-semibold self-center my-5"
+          >
+            Post Your Inquiry
+          </button>
         </form>
-        <button className="rounded-full text-black bg-blue-200 shadow-2xl px-9 py-2 font-semibold self-center my-5">
-          Post Your Inquiry
-        </button>
       </div>
 
       <iframe

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaShareAlt } from "react-icons/fa";
-import StarRatingComponent from "./StarRatingComponent";
+import StarRatingComponent from "../components/StarRatingComponent";
 
 function IndexPageComponent() {
   return (
@@ -10,13 +10,14 @@ function IndexPageComponent() {
       </h1>
       <p className="text-justify tracking-wider font-medium leading-7 ">
         <span className="font-bold mb-5 ">Helo, I’m Gautam Paladiya!</span>
-        <br /> I am talanted florist and decorator. I have graduated from
-        International and cultural university of design and arts. Since first
-        year in high school I relized that nature is most powerfull and
-        beautiful gift in the world. I was captivated by beauty and simplicity
-        of flowers and trees. Since then I have started to create and mastering
-        unique and nice bouquets. My 1st masterpiece was garden of ant Ula Lowe
-        decorated by me
+        <br /> I have more than 2 years of experience in Full stack web
+        development with React as frontend and Node.js, Laravel as backend and
+        continues integration, deployment CI/CD, Docker, Kubernetes with Aws
+        cloud hosting. Developed ecommerce to Blogging and utility web apps with
+        latest technology like Socket.io, Webrtc, TypeORM, GraphQL, social media
+        integration and yes also secure authentication and authorisation for
+        frontend and backend. Like to work with Team and handy experience with
+        Jira, etc.
       </p>
       <div className="my-10">
         <button className="flex items-center border-2 rounded-full px-4 py-1 border-blue-300">

@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import HeaderCompoent from "../components/HeaderCompoent";
-import IndexPageComponent from "../components/IndexPageComponent";
 import NavMenuComponent from "../components/NavMenuComponent";
 import ProfileCardComponent from "../components/ProfileCardComponent";
 import BackgroundImage from "../assets/img/background.jpg";
-import WorkExperienceComponent from "../components/WorkExperienceComponent";
-import ContactMeComponent from "../components/ContactMeComponent";
+import IndexPageComponent from "../sections/IndexPageComponent";
+import WorkExperienceComponent from "../sections/WorkExperienceComponent";
+import ContactMeComponent from "../sections/ContactMeComponent";
 import { motion } from "framer-motion";
 
 const initialState = {
